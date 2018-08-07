@@ -1,5 +1,15 @@
 # Windows Templates for Packer
 
+### Notes about this fork
+
+An additional configuration has been added:
+``windows_10_enterprise_N_KMS``, which uses the KMS product key for
+Windows 10 Enterprise N (see
+http://technet.microsoft.com/en-us/library/jj612867.aspx).
+
+Caveats: It may not be fully automatic, some interactive prompts may
+appear during windows installation.
+
 ### Introduction
 
 This repository contains Windows templates that can be used to create boxes for Vagrant using Packer ([Website](http://www.packer.io)) ([Github](http://github.com/mitchellh/packer)).
@@ -105,7 +115,7 @@ Alternatively – if you have access to [MSDN](http://msdn.microsoft.com) or [Te
 3. Clone this repo to a local directory
 4. Move `en_windows_server_2008_r2_with_sp1_x64_dvd_617601.iso` to the `iso` directory
 5. Run:
-    
+
     ```
     packer build \
         -var iso_url=./iso/en_windows_server_2008_r2_with_sp1_x64_dvd_617601.iso \
